@@ -9,10 +9,18 @@ namespace Garage
 {
     internal class Vehicle
     {
-        private int price = 0;
+        protected string regNumber = "";
+        protected string color = "";
+        protected int numOfWheels = 0;
 
-        public void Setprice(int p) { price = p; }
-        public int GetPrice() { return price; }
+        public Vehicle(string regnr, string color, int numOfWheels)
+        {
+            this.regNumber = regnr;
+            this.color = color;
+            this.numOfWheels = numOfWheels;
+        }
+
+        public string GetRegnum() { return regNumber; }
     }
 }
 
