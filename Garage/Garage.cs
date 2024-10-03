@@ -20,7 +20,7 @@ namespace Garage
             vehicles = new Vehicle[n];
         }
 
-        public void AddCar(string regnr, string color, int numOfWheels, FuelType ft)
+        public void AddCar(string regnr, string color, FuelType ft)
         {
             int i = 0;
             for(i = 0; i < vehicles.Length; i++) 
@@ -38,7 +38,31 @@ namespace Garage
 
             else
             {
-                vehicles[i] = new Car(regnr, color, numOfWheels, ft);
+                vehicles[i] = new Car(regnr, color, ft);
+                Console.WriteLine("Fordonet parkerat");
+            }
+        }
+
+        public void AddBus(string regnr, string color, int numofseats)
+        {
+            int i = 0;
+            for (i = 0; i < vehicles.Length; i++)
+            {
+                if (vehicles[i] == null)
+                {
+                    break;
+                }
+            }
+
+            if (i == vehicles.Length)
+            {
+                Console.WriteLine("Garaget är tyvärr fullt");
+            }
+
+            else
+            {
+                vehicles[i] = new Bus(regnr, color, numofseats);
+                Console.WriteLine("Fordonet parkerat");
             }
         }
 
@@ -51,6 +75,7 @@ namespace Garage
                     if (vehicles[i].GetRegnum() == regnr)
                     {
                         vehicles[i] = null;
+                        Console.WriteLine("Fordonet uttaget");
                         break;
                     }
                 }
@@ -64,6 +89,7 @@ namespace Garage
                 if (vehicles[i] != null)
                 {
                     Console.WriteLine(vehicles[i].GetRegnum());
+                    Console.WriteLine(vehicles[i].GetType().Name);
                 }
             }
         }

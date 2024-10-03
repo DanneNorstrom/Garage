@@ -21,6 +21,11 @@ namespace Garage
         }
 
         public string GetRegnum() { return regNumber; }
+
+        /*public virtual void TestaTyp()
+        {
+            //throw new NotImplementedException();
+        }*/
     }
 }
 

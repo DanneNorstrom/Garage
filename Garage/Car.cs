@@ -11,10 +11,16 @@ namespace Garage
     {
         private FuelType ft;
 
-        public Car(string regnr, string color, int numOfWheels, FuelType ft) : base(regnr, color, numOfWheels)
+        public Car(string regnr, string color, FuelType ft) : base(regnr, color, 4)
         {
             this.ft = ft;
         }
+
+        /*public override void PrintType()
+        {
+            Console.WriteLine(this.GetType().Name); 
+        }*/
+
 
 
         /*public void SetFuelType(FuelType ft)

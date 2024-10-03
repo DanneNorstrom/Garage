@@ -15,10 +15,14 @@ namespace Garage
         {
             g = new Garage<Vehicle>(numOfLots);
         }
-
-        public void AddCar(string regnr, string color, int numOfWheels, FuelType ft)
+        public void AddCar(string regnr, string color, FuelType ft)
         {
-            g.AddCar(regnr, color, numOfWheels, ft);
+            g.AddCar(regnr, color, ft);
+        }
+
+        public void AddBus(string regnr, string color, int numofseats)
+        {
+            g.AddBus(regnr, color, numofseats);
         }
 
         public void RemoveVehicle(string regnr)

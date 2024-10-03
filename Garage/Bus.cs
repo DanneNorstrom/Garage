@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace Garage
 {
-    /*internal class Bus : Vehicle
+    internal class Bus : Vehicle
     {
-        private int numOfSeats;
+        private int numOfSeats = 0;
+
+        public Bus(string regnr, string color, int numOfSeats) : base(regnr, color, 4)
+        {
+            this.numOfSeats = numOfSeats;
+        }
+
 
         /*public void SetNumOfSeats(int numOfSeats)
         {
@@ -19,5 +25,5 @@ namespace Garage
         {
             return numOfSeats;
         }*/
-    //}
+    }
 }
