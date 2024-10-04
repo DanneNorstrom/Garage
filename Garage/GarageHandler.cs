@@ -25,6 +25,11 @@ namespace Garage
             g.AddBus(regnr, color, numofseats);
         }
 
+        public void AddMotorcycle(string regnr, string color, string cylvol)
+        {
+            g.AddMotorcycle(regnr, color, cylvol);
+        }
+
         public void RemoveVehicle(string regnr)
         {
             g.RemoveVehicle(regnr);
@@ -33,6 +38,16 @@ namespace Garage
         public void ShowVehicles()
         {
             g.ShowVehicles();
+        }
+
+        public void ShowStatistics() 
+        {
+            g.ShowStatistics();
+        }
+
+        public void SearchGarage(string vregnr, string vcolor, string vnumofwheels, string vtype)
+        {
+            g.Search(vregnr, vcolor, vnumofwheels, vtype);
         }
     }
 }

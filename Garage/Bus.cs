@@ -10,7 +10,7 @@ namespace Garage
     {
         private int numOfSeats = 0;
 
-        public Bus(string regnr, string color, int numOfSeats) : base(regnr, color, 4)
+        public Bus(string regnr, string color, int numOfSeats) : base(regnr, color, "4")
         {
             this.numOfSeats = numOfSeats;
         }

@@ -11,7 +11,7 @@ namespace Garage
     {
         private FuelType ft;
 
-        public Car(string regnr, string color, FuelType ft) : base(regnr, color, 4)
+        public Car(string regnr, string color, FuelType ft) : base(regnr, color, "4")
         {
             this.ft = ft;
         }

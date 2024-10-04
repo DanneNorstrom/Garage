@@ -11,9 +11,9 @@ namespace Garage
     {
         protected string regNumber = "";
         protected string color = "";
-        protected int numOfWheels = 0;
+        protected string numOfWheels = "";
 
-        public Vehicle(string regnr, string color, int numOfWheels)
+        public Vehicle(string regnr, string color, string numOfWheels)
         {
             this.regNumber = regnr;
             this.color = color;
@@ -21,11 +21,8 @@ namespace Garage
         }
 
         public string GetRegnum() { return regNumber; }
-
-        /*public virtual void TestaTyp()
-        {
-            //throw new NotImplementedException();
-        }*/
+        public string GetColor() { return color; }
+        public string GetNumOfWheels() { return numOfWheels; }
     }
 }
 

@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 
 namespace Garage
 {
-    /*internal class Motorcycle : Vehicle
+    internal class Motorcycle : Vehicle
     {
+        private string cylinderVolume = "";
 
+        public Motorcycle(string regnr, string color, string cylinderVol) : base(regnr, color, "2")
+        {
+            cylinderVolume = cylinderVol;
+        }
 
-        /*private float cylinderVolume;
-
-        public void SetCylinderVol(float cv)
+        /*public void SetCylinderVol(float cv)
         {
             cylinderVolume = cv;
         }
@@ -20,6 +23,6 @@ namespace Garage
         public float GetCylinderVol()
         {
             return cylinderVolume;
-        }
-    }*/
+        }*/
+    }
 }
