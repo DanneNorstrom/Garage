@@ -6,9 +6,12 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
+
+//TODO: input validation with Regex
+
 namespace Garage
 {
-    internal class UI
+    internal class UI : IUI
     {
         public void Menu(ref GarageHandler gh)
         {
@@ -53,7 +56,11 @@ namespace Garage
                                 Console.WriteLine("Ange färg på bilen:");
                                 string color = Console.ReadLine().ToLower();
 
-                                gh.AddCar(regnr, color, FuelType.Diesel);
+                                Car c = new Car(regnr, color, FuelType.Diesel);
+
+                                gh.AddVehicle(c);
+
+                                //gh.AddCar(regnr, color, FuelType.Diesel);
                             break;
 
                             case '2':
@@ -66,7 +73,12 @@ namespace Garage
                                 string inp2 = Console.ReadLine();
                                 int seats = Convert.ToInt32(inp2);
 
-                                gh.AddBus(regnr2, color2, seats);
+
+                                Bus b = new Bus(regnr2, color2, seats);
+
+                                gh.AddVehicle(b);
+
+                                //gh.AddBus(regnr2, color2, seats);
                             break;
 
                             case '3':
@@ -77,7 +89,11 @@ namespace Garage
                                 Console.WriteLine("Ange cylindervolym:");
                                 string cylvol = Console.ReadLine().ToLower();
 
-                                gh.AddMotorcycle(regnr4, color4, cylvol);
+                                Motorcycle m = new Motorcycle(regnr4, color4, cylvol);  
+
+                                gh.AddVehicle(m);
+
+                                //gh.AddMotorcycle(regnr4, color4, cylvol);
                             break;
 
                             default:

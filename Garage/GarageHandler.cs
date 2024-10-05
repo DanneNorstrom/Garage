@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Garage
 {
-    internal class GarageHandler
+    internal class GarageHandler : IHandler
     {
         Garage<Vehicle> g;
 
@@ -15,7 +15,13 @@ namespace Garage
         {
             g = new Garage<Vehicle>(numOfLots);
         }
-        public void AddCar(string regnr, string color, FuelType ft)
+
+        public void AddVehicle(Vehicle v)
+        {
+            g.AddVehicle(v);
+        }
+
+        /*public void AddCar(string regnr, string color, FuelType ft)
         {
             g.AddCar(regnr, color, ft);
         }
@@ -28,7 +34,7 @@ namespace Garage
         public void AddMotorcycle(string regnr, string color, string cylvol)
         {
             g.AddMotorcycle(regnr, color, cylvol);
-        }
+        }*/
 
         public void RemoveVehicle(string regnr)
         {

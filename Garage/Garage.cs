@@ -20,7 +20,30 @@ namespace Garage
             vehicles = new Vehicle[n];
         }
 
-        public void AddCar(string regnr, string color, FuelType ft)
+        public void AddVehicle(Vehicle v)
+        {
+            int i = 0;
+            for (i = 0; i < vehicles.Length; i++)
+            {
+                if (vehicles[i] == null)
+                {
+                    break;
+                }
+            }
+
+            if (i == vehicles.Length)
+            {
+                Console.WriteLine("Garaget är tyvärr fullt");
+            }
+
+            else
+            {
+                vehicles[i] = v;
+                Console.WriteLine("Fordonet parkerat");
+            }
+        }
+            
+        /*public void AddCar(string regnr, string color, FuelType ft)
         {
             int i = 0;
             for(i = 0; i < vehicles.Length; i++) 
@@ -87,7 +110,7 @@ namespace Garage
                 vehicles[i] = new Motorcycle(regnr, color, cylvol);
                 Console.WriteLine("Fordonet parkerat");
             }
-        }
+        }*/
 
         public void RemoveVehicle(string regnr)
         {

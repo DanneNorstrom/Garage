@@ -16,22 +16,10 @@ namespace Garage
             this.ft = ft;
         }
 
-        /*public override void PrintType()
-        {
-            Console.WriteLine(this.GetType().Name); 
-        }*/
-
-
-
-        /*public void SetFuelType(FuelType ft)
-        {
-            this.ft = ft;
-        }
-
         public FuelType GetFuelType(FuelType ft)
         {
             return ft;
-        }*/
+        }
     }
 
     public enum FuelType

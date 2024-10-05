@@ -15,15 +15,9 @@ namespace Garage
             this.numOfSeats = numOfSeats;
         }
 
-
-        /*public void SetNumOfSeats(int numOfSeats)
-        {
-            this.numOfSeats = numOfSeats;
-        }
-
         public int GetNumOfSeats()
         {
             return numOfSeats;
-        }*/
+        }
     }
 }

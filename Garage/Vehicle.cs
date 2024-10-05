@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Garage
 {
-    internal class Vehicle
+    internal class Vehicle : IVehicle
     {
         protected string regNumber = "";
         protected string color = "";

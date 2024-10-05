@@ -14,15 +14,9 @@ namespace Garage
         {
             cylinderVolume = cylinderVol;
         }
-
-        /*public void SetCylinderVol(float cv)
-        {
-            cylinderVolume = cv;
-        }
-
-        public float GetCylinderVol()
+        public string GetCylinderVol()
         {
             return cylinderVolume;
-        }*/
+        }
     }
 }
